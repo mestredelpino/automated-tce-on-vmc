@@ -85,6 +85,8 @@ kubectl get app contour -n tanzu-system-ingress
 
 #### Install harbor
 
+![alt text](SDDC-Deployment/images/harbor.png)
+
 1. Extract harbor's latest available version
 ```bash
 harbor_version=`tanzu package available list harbor.community.tanzu.vmware.com -A -o json | jq .[-1].version`
@@ -132,6 +134,9 @@ kubectl -n harbor get secret harbor-tls -o=jsonpath="{.data.ca\.crt}" | base64 -
 
 
 #### Install prometheus
+
+
+![alt text](SDDC-Deployment/images/prometheus.png)
 
 1. Extract prometheus' latest available version
 ```bash
@@ -185,6 +190,8 @@ tanzu package install prometheus \
 
 After a few minutes, you will be able to access prometheus on prometheus.yourdomain.com (provided you added an entry to your hosts file)
 #### Install grafana
+
+![alt text](SDDC-Deployment/images/grafana.png)
 
 1. Extract Grafana's latest available version
 ```bash

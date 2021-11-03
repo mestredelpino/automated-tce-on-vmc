@@ -22,10 +22,9 @@ your workstation is in, which is necessary to deploy the AVI and TKG OVA/OVF Fil
 1. Download the [ubuntu server cloud image OVA](https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64.ova)
    (used for the jumpbox VM) and paste it in /SDDC-Deployment/vmware/ovas
 2. Open your browser and navigate to the [download page of the tanzu OVA files](https://my.vmware.com/en/group/vmware/downloads/info/slug/infrastructure_operations_management/vmware_tanzu_kubernetes_grid/1_x)
-3. Go to downloads and select the version 1.4
-4. Clone this repo to your desired location
-5. Download the **Photon v3 Kubernetes v1.21.2 OVA** and paste it in /SDDC-Deployment/vmware/ovas
-6. Download the **VMWare TCE CLI for Linux** and paste it in /SDDC-Deployment/vmware/tanzu
+3. Clone this repo to your desired location
+4. Download the [**photon-3-kube-v1.21.2+vmware.1-tkg.2-12816990095845873721.ova**](https://customerconnect.vmware.com/downloads/get-download?downloadGroup=TCE-090) and paste it in /SDDC-Deployment/vmware/ovas
+5. Download the [**VMWare TCE CLI for Linux**](https://tanzucommunityedition.io/download/) and paste it in /SDDC-Deployment/vmware/tanzu
 
 
 ### Setting up the credentials

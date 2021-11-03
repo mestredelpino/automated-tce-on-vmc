@@ -46,7 +46,9 @@ tanzu package install cert-manager --package-name cert-manager.community.tanzu.v
 
 #### Install contour
 
+
 ![alt text](SDDC-Deployment/images/contour.svg)
+
 
 1. Extract contour's latest available version
 ```bash
@@ -191,7 +193,7 @@ tanzu package install prometheus \
 After a few minutes, you will be able to access prometheus on prometheus.yourdomain.com (provided you added an entry to your hosts file)
 #### Install grafana
 
-![alt text](SDDC-Deployment/images/grafana.png)
+![alt text](SDDC-Deployment/images/grafana.svg)
 
 1. Extract Grafana's latest available version
 ```bash

@@ -1,0 +1,60 @@
+image:
+  name: hashicorp/terraform:light
+  entrypoint:
+    - '/usr/bin/env'
+    - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+
+before_script:
+  - terraform version
+
+phase1:
+  stage: test
+  script:
+    - cd phase1
+    - terraform init -reconfigure
+    - terraform validate
+    - terraform fmt -check=true
+    - cd ..
+
+phase2:
+  stage: test
+  script:
+    - cd phase2
+    - terraform init -reconfigure
+    - terraform validate
+    - terraform fmt -check=true
+    - cd ..
+
+# phase3:
+#   stage: test
+#   script:
+#     - cd phase3
+#     - terraform init -reconfigure
+#     - terraform validate
+#     - terraform fmt -check=true
+#     - cd ..
+
+phase4:
+  stage: test
+  script:
+    - cd phase4
+    - terraform init -reconfigure
+    - terraform validate
+    - terraform fmt -check=true
+    - cd ..
+
+# phase5:
+#   stage: test
+#   script:
+#     - cd phase5
+#     - terraform init -reconfigure
+#     - terraform validate
+#     - terraform fmt -check=true
+#     - cd ..
+
+markdownlint:
+  stage: test
+  image: pipelinecomponents/markdownlint:latest
+  before_script: []
+  script:
+    - mdl --style all --warnings --rules ~MD013,~MD026,~MD046 --ignore-front-matter .

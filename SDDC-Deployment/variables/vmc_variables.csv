@@ -1,0 +1,7 @@
+Variable, Value
+TF_VAR_vmc_refresh_token, ""
+Org, ""
+TF_VAR_sddc_a_name, ""
+TF_VAR_vmc_org_id, ""
+TF_VAR_sddc_a_region,""
+

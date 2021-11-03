@@ -1,7 +1,5 @@
 # VMWare Cloud SDDC & TKG deployment with PowerCLI and Terraform
 
-*** UPDATE TEXT BELOW ***
-
 This repository deploys a software defined data center (SDDC) on VMware Cloud on AWS and a Tanzu Community Edition cluster on top of it.
 
 The script consists of a phased terraform deployment which creates diverse infrastructure resources such as an SDDC, NSX-T segments and policies, a VPN tunnel with your on-premises 
@@ -108,3 +106,11 @@ cert_manager_version=`sed -e 's/^"//' -e 's/"$//' <<<$cert_manager_version`
 # Install cert-manager
 tanzu package install cert-manager --package-name cert-manager.community.tanzu.vmware.com --version $cert_manager_version -n cert-manager --create-namespace
 ```
+
+## 3. Deploying the tanzu compute cluster
+
+Create a tanzu management cluster by running the following
+
+ ```bash
+tanzu management-cluster create --file ~/.config/tanzu/tkg/clusterconfigs/mgmt_cluster_config.yaml -v 8
+ ```

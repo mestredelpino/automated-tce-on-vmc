@@ -1,0 +1,6 @@
+Variable, Value
+AWS_ACCESS_KEY_ID,""
+AWS_SECRET_ACCESS_KEY,""
+AWS_SESSION_TOKEN, ""
+TF_VAR_aws_account_number, ""
+TF_VAR_sddc_a_connected_vpc_cidr, ""

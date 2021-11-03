@@ -1,0 +1,3 @@
+Variable, Value
+TF_VAR_sddc_a_mgmt_cidr, ""
+TF_VAR_sddc_a_vm_segment_cidr, ""

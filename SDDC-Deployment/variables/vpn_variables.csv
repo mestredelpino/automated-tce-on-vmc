@@ -1,0 +1,16 @@
+Variable, Value
+Name, ""
+RemotePublicIP,""
+RemotePrivateIP, ""
+SequenceNumber,
+DestinationIPs, ""
+TunnelEncryption, ""
+TunnelDigestEncryption, ""
+IKEEncryption,""
+IKEDigestEncryption, ""
+DHGroup, ""
+IKEVersion, ""
+PresharedPassword, ""
+TF_VAR_internal_vlan_ip_range, ""
+TF_VAR_workstation_public_ip, ""
+TF_VAR_your_gateway_ip, ""

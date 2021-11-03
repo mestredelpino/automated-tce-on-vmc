@@ -112,5 +112,20 @@ tanzu package install cert-manager --package-name cert-manager.community.tanzu.v
 Create a tanzu management cluster by running the following
 
  ```bash
-tanzu management-cluster create --file ~/.config/tanzu/tkg/clusterconfigs/mgmt_cluster_config.yaml -v 8
+tanzu management-cluster create --file ~/.config/tanzu/tkg/clusterconfigs/dev01_cluster_config.yaml -v 8
  ```
+
+Create a kubeconfig in order to access your cluster:
+
+ ```bash
+tanzu cluster kubeconfig get dev01 --admin --export-file dev01.kubeconfig
+ ```
+
+Connect your workload cluster to a vSphere data store by applying the generated manifest file.
+
+ ```bash
+kubectl apply -f vsphere-storageclass.yml
+ ```
+
+Now that both the management and workload clusters have been deployed, you can [deploy a shared service cluster and install 
+some of the Tanzu packages](./package_installation.md)

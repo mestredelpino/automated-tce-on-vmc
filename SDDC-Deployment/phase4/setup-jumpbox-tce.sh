@@ -70,7 +70,12 @@ EOF
     cat <<EOF >> ~/tkg_services_cluster_config.yaml
 CLUSTER_NAME: tkg-services
 CLUSTER_PLAN: dev
-VSPHERE_CONTROL_PLANE_ENDPOINT: "$CONTROL_PLANE_ENDPOINT_TKG_SERVICES"
+VSPHERE_CONTROL_PLANE_ENDPOINT: "$Contr"
+EOF
+    cat <<EOF >> ~/dev01_cluster_config.yaml
+CLUSTER_NAME: dev01
+CLUSTER_PLAN: dev
+VSPHERE_CONTROL_PLANE_ENDPOINT: "CONTROL_PLANE_ENDPOINT_DEV01"
 EOF
   mv ~/tkg_services_cluster_config.yaml ~/.config/tanzu/tkg/clusterconfigs/tkg_services_cluster_config.yaml
   /bin/rm -f /home/ubuntu/tkg-cluster.yml

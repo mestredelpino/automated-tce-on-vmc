@@ -203,6 +203,12 @@ resource "vsphere_virtual_machine" "jumpbox" {
   }
 
   provisioner "file" {
+    # Copy additional configuration file.
+    source      = "./vsphere-storageclass.yml"
+    destination = "/home/ubuntu/tanzu/vsphere-storageclass.yml"
+  }
+
+  provisioner "file" {
     # Copy kubectl.
     source      = "../vmware/tanzu/${var.tce_file}"
     destination = "/home/ubuntu/${var.tce_file}"

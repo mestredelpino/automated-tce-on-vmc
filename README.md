@@ -126,5 +126,5 @@ Connect your workload cluster to a vSphere data store by applying the generated 
 kubectl apply -f vsphere-storageclass.yml
  ```
 
-Now that both the management and workload clusters have been deployed, you can [deploy a shared service cluster and install 
+Now that both the management and workload clusters have been deployed, you can [deploy a shared services cluster and install 
 some of the Tanzu packages](./package_installation.md)

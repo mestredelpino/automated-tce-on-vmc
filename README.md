@@ -12,7 +12,7 @@ your workstation is in, which is necessary to deploy the AVI and TKG OVA/OVF Fil
 1. [Install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 2. [Install AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-windows.html) and [add it to path](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html#awscli-install-windows-path)
 3. [Install PowerCLI](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.esxi.install.doc/GUID-F02D0C2D-B226-4908-9E5C-2E783D41FE2D.html)
-4. [Install OpenSSH Client and Server**](https://www.thomasmaurer.ch/2020/04/enable-powershell-ssh-remoting-in-powershell-7/)
+4. [Install OpenSSH Client and Server](https://www.thomasmaurer.ch/2020/04/enable-powershell-ssh-remoting-in-powershell-7/)
 5. Generate an ssh key by running `ssh-keygen -t rsa -b 2048`
 6. Install [OVF tool](https://www.vmware.com/support/developer/ovf/) (might be needed for troubleshooting)
 

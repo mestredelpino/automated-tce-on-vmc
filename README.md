@@ -35,8 +35,8 @@ your workstation is in, which is necessary to deploy the AVI and TKG OVA/OVF Fil
    1. Copy the credentials from **option 3** for further use   <br/>  <br/>
    ![alt text](SDDC-Deployment/images/aws_credentials_step2.png)
 2. [Generate a VMware Cloud token](https://docs.vmware.com/en/VMware-Cloud-services/services/Using-VMware-Cloud-Services/GUID-E2A3B1C1-E9AD-4B00-A6B6-88D31FCDDF7C.html) (with NSX Cloud admin & administrator rights)
-3. Navigate to the SDDC-Deployment/variables directory
-4. Fill in your credentials in vmc_variables.csv, vpn_variables.csv, aws_variables.csv, sddc_variables.csv and tanzu_variables.csv
+3. Navigate to the SDDC-Deployment/variables directory 
+4. Fill in your credentials in vmc_variables.csv, vpn_variables.csv, aws_variables.csv, sddc_variables.csv and tanzu_variables.csv [click here for a detailed explanation of the variables](./variables.md)
 
 
 ## 1. Deploying an SDDC in VMWare Cloud on AWS

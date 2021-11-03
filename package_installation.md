@@ -2,6 +2,7 @@
 
 After deploying the management cluster, it is time to deploy the shared-services cluster, which is where the Tanzu packages will be deployed into. By deploying services into the
 [shared services cluster](https://docs.vmware.com/en/VMware-Tanzu-Kubernetes-Grid/1.3/vmware-tanzu-kubernetes-grid-13/GUID-extensions-index.html#shared), said services will be able to serve to other services.
+Follow these instructions to deploy a shared services clusters and to install Contour, Harbor, Prometheus and Grafana.
 
 Create a cluster and change to its context:
 ```bash
@@ -29,7 +30,7 @@ mkdir ~/tanzu/package_values
 cd ~/tanzu/package_values
 ```
 
-#### Install cert-manager
+#### 1. Install cert-manager
 
 Install cert-manager on the tkg-services cluster:
 
@@ -44,11 +45,8 @@ cert_manager_version=`sed -e 's/^"//' -e 's/"$//' <<<$cert_manager_version`
 tanzu package install cert-manager --package-name cert-manager.community.tanzu.vmware.com --version $cert_manager_version -n cert-manager --create-namespace
 ```
 
-#### Install contour
-
-
+#### 2. Install contour
 ![alt text](SDDC-Deployment/images/contour.svg)
-
 
 1. Extract contour's latest available version
 ```bash
@@ -85,7 +83,7 @@ tanzu package install contour \
 kubectl get app contour -n tanzu-system-ingress
 ```
 
-#### Install harbor
+#### 3. Install harbor
 
 ![alt text](SDDC-Deployment/images/harbor.png)
 
@@ -135,7 +133,7 @@ kubectl -n harbor get secret harbor-tls -o=jsonpath="{.data.ca\.crt}" | base64 -
 ```
 
 
-#### Install prometheus
+#### 4. Install prometheus
 
 
 ![alt text](SDDC-Deployment/images/prometheus.png)
@@ -191,9 +189,9 @@ tanzu package install prometheus \
 
 
 After a few minutes, you will be able to access prometheus on prometheus.yourdomain.com (provided you added an entry to your hosts file)
-#### Install grafana
+#### 5. Install grafana
 
-![alt text](SDDC-Deployment/images/grafana.svg)
+![alt text](SDDC-Deployment/images/Grafana.png)
 
 1. Extract Grafana's latest available version
 ```bash

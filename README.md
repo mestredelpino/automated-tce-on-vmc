@@ -93,7 +93,6 @@ Check that the repository was successfully imported:
 tanzu package repository list -A
 ```
 
-
 ### Install cert manager on management cluster
 On TKG standard version, cert-manager gets installed on the management-cluster by default, but on TCE you have to install cert-manager manually.
 

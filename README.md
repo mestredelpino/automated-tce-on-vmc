@@ -43,8 +43,9 @@ your workstation is in, which is necessary to deploy the AVI and TKG OVA/OVF Fil
 
 ![alt text](SDDC-Deployment/images/vmc_on_aws.png)
 
-1. Navigate to the *"SDDC-Deployment"* directory
-2. Execute `.\createSDDC.ps1`
+1. Open a powershell console
+2. Navigate to the *"SDDC-Deployment"* directory
+3. Execute `.\createSDDC.ps1`
 
 Once the SDDC is created, the terminal will prompt the three IP addresses that need to be added to the IPSec tunnel on your on-premises firewall.
 Additionally, a text file was created (cgw_snat_ip.txt) which contains the Source NAT IP address of the compute network (for later use)

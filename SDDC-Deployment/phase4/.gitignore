@@ -8,7 +8,7 @@ tkg-cluster.yml
 vsphere-storageclass.yml
 *.ova
 env
-
+env.tpl
 tanzu-cli-*
 
 password.tfvars

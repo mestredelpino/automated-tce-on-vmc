@@ -116,7 +116,7 @@ tanzu package install harbor \
 
 5. Check the that the deployment was successful by running (The description must be "Reconcile succeeded")
 ```bash
-kubectl get app harbor -n tanzu-system-registry
+kubectl get app harbor -n harbor
 ```
 
 6. Obtain the Harbor CA certificate

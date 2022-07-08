@@ -24,7 +24,17 @@ kubectl config use-context tkg-services-admin@tkg-services
 
 ### Installing the packages
 
-1. Create a directory wehere we will store all the config files for each package
+#### Adding the Tanzu Community Edition repository
+
+In order to install any of the Tanzu packages, it is first necessary to add the Tanzu community edition repository:
+
+ ```bash
+tanzu package repository add tce-repo \
+--url projects.registry.vmware.com/tce/main:0.12.0 \
+--namespace tanzu-package-repo-global
+```
+
+1. Create a directory where we will store all the config files for each package
  ```bash
 mkdir ~/tanzu/package_values
 cd ~/tanzu/package_values

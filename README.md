@@ -84,7 +84,7 @@ In order to install any of the Tanzu packages, it is first necessary to add the 
 
  ```bash
 tanzu package repository add tce-repo \
---url projects.registry.vmware.com/tce/main:0.9.1 \
+--url projects.registry.vmware.com/tce/main:0.12.0 \
 --namespace tanzu-package-repo-global
 ```
 
@@ -92,18 +92,6 @@ Check that the repository was successfully imported:
 
  ```bash
 tanzu package repository list -A
-```
-
-### Install cert manager on management cluster
-On TKG standard version, cert-manager gets installed on the management-cluster by default, but on TCE you have to install cert-manager manually.
-
- ```bash
-# Extract the latest available version from cert-manager
-cert_manager_version=`tanzu package available list cert-manager.community.tanzu.vmware.com -A -o json | jq .[-1].version`
-cert_manager_version=`sed -e 's/^"//' -e 's/"$//' <<<$cert_manager_version`
-
-# Install cert-manager
-tanzu package install cert-manager --package-name cert-manager.community.tanzu.vmware.com --version $cert_manager_version -n cert-manager --create-namespace
 ```
 
 ## 3. Deploying the tanzu compute cluster
